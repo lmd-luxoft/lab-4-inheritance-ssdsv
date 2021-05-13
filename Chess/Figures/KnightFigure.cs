@@ -1,10 +1,14 @@
 ﻿using System;
 
-namespace Chess
+namespace Chess.Figures
 {
-    internal class KnightFigureMovementStrategy : IFigureMovementStrategy
+    internal class KnightFigure : ChessFigure
     {
-        public bool CanMove(string currentCoord, string nextCoord)
+        public KnightFigure(string currentCoord) : base(currentCoord)
+        {
+        }
+
+        internal override bool MoveInner(string nextCoord)
         {
             int dx, dy;
             dx = Math.Abs(nextCoord[0] - currentCoord[0]);

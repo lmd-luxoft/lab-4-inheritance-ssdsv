@@ -1,10 +1,14 @@
 ﻿using System;
 
-namespace Chess
+namespace Chess.Figures
 {
-    internal class QueenFigureMovementStrategy : IFigureMovementStrategy
+    internal class QueenFigure : ChessFigure
     {
-        public bool CanMove(string currentCoord, string nextCoord)
+        public QueenFigure(string currentCoord) : base(currentCoord)
+        {
+        }
+
+        internal override bool MoveInner(string nextCoord)
         {
             return Math.Abs(nextCoord[0] - currentCoord[0]) == Math.Abs(nextCoord[1] - currentCoord[1]) || nextCoord[0] == currentCoord[0] || nextCoord[1] == currentCoord[1];
         }

@@ -1,14 +1,18 @@
-﻿namespace Chess
+﻿namespace Chess.Figures
 {
-    internal class RookFigureMovementStrategy : IFigureMovementStrategy
+    internal class RookFigure : ChessFigure
     {
-        public bool CanMove(string currentCoord, string nextCoord)
+        public RookFigure(string currentCoord) : base(currentCoord)
+        {
+        }
+
+        internal override bool MoveInner(string nextCoord)
         {
             return !((nextCoord[0] != currentCoord[0])
                      && (nextCoord[1] != currentCoord[1])
                      || ((nextCoord[0] == currentCoord[0])
                          && (nextCoord[1] == currentCoord[1]))
-                     );
+                );
         }
     }
 }

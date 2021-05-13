@@ -1,8 +1,12 @@
-﻿namespace Chess
+﻿namespace Chess.Figures
 {
-    internal class PawnFigureMovementStrategy : IFigureMovementStrategy
+    internal class PawnFigure : ChessFigure
     {
-        public bool CanMove(string currentCoord, string nextCoord)
+        public PawnFigure(string currentCoord) : base(currentCoord)
+        {
+        }
+
+        internal override bool MoveInner(string nextCoord)
         {
             return !(nextCoord[0] != currentCoord[0]
                      || nextCoord[1] <= currentCoord[1]
