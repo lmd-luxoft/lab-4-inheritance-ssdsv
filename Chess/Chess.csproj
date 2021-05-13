@@ -40,7 +40,14 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Strategies\BishopFigureMovementStrategy.cs" />
     <Compile Include="ChessFigure.cs" />
+    <Compile Include="IFigureMovementStrategy.cs" />
+    <Compile Include="Strategies\KingFigureMovementStrategy.cs" />
+    <Compile Include="Strategies\KnightFigureMovementStrategy.cs" />
+    <Compile Include="Strategies\PawnFigureMovementStrategy.cs" />
+    <Compile Include="Strategies\QueenFigureMovementStrategy.cs" />
+    <Compile Include="Strategies\RookFigureMovementStrategy.cs" />
     <Compile Include="TestClass.cs" />
   </ItemGroup>
   <ItemGroup>
